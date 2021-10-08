@@ -13,22 +13,7 @@
     <script src="https://unpkg.com/vue@next"></script>
 
     <!-- Mon style -->
-    <style>
-        body
-        {
-            background-color: rgba(240, 250, 240, 1);
-        }
-        .competences
-        {
-            height: 50px;
-            border-radius: 4px;
-        }
-        .detail
-        {
-            text-decoration: none;
-            color: black;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="contenu">
@@ -41,7 +26,9 @@
         </keep-alive>
 
         <!-- Pied de page -->
-        <?php include_once('footer.php'); ?>
+        <footer>
+            <?php include_once('footer.php'); ?>
+        </footer>
     </div>
 
     <script>
@@ -52,8 +39,16 @@
                     pageCourante: 'accueil',
                     pages: [
                         {id: 'accueil', nom: 'Accueil'},
-                        {id: 'cv', nom: 'Mon CV'},
-                        {id: 'competences', nom: 'Mes Compétences'}
+                        {id: 'profil', nom: 'Profil'},
+                        {id: 'doc', nom: 'Documentation'},
+                        {id: 'situation', nom: 'Situation Professionnelle'},
+                        // {id: 'cv', nom: 'Mon CV'},
+                        // {id: 'competences', nom: 'Mes Compétences'}
+                    ],
+                    projet: 'ecole',
+                    projets: [
+                        {id: 'ecole', nom: 'Projets Ecole'},
+                        {id: 'entreprise', nom: 'Projets Entreprise'}
                     ]
                 }
             },
@@ -68,8 +63,147 @@
 
         vm.component('page-accueil', {
             template: `
+                <!-- Banière -->
+                <div class="container-fluid baniere">
+                    <h1 class="text-center">BTS SIO</h1>
+                </div>
                 <div class="container text-center p-3">
                     <h2 class="h2">Présentation du BTS SIO</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                        pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                        pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                        pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                        pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.
+                    </p>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <h3>OPTION SISR</h3>
+                            <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                                pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                                pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                                pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                                pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <h3>OPTION SISR</h3>
+                            <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                                pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                                pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                                pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                                pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `
+        });
+
+        vm.component('page-profil', {
+            template: `
+                <!-- Banière -->
+                <div class="container-fluid baniere">
+                    <h1 class="text-center">PROFIL</h1>
+                </div>
+                <div class="container text-center p-3">
+                    <h2 class="h2">Présentation personnelle</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                        pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.
+                    </p>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                                    pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                                    pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                                    pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `
+        });
+
+        vm.component('page-doc', {
+            template: `
+                <!-- Banière -->
+                <div class="container-fluid text-center baniere">
+                    <h1 class="text-center">DOCUMENTATION</h1>
+                </div>
+                <div class="container text-center p-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-outline btn-dark">PROJETS ECOLES</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-outline btn-dark">PROJETS ENTREPRISES</button>
+                        </div>
+                    </div>
+                    <h2 class="h2">Documentation</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                        pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.
+                    </p>
+                </div>
+            `
+        });
+
+        vm.component('page-ecole', {
+            template: `
+                <!-- Banière -->
+                <div class="container-fluid text-center baniere">
+                    <h1 class="text-center">PROJET ECOLE</h1>
+                </div>
+                <div class="container">
+                    <div class="jumbotron">
+                        <h2 class="h2">PetitS trucs</h2>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
+                        pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.
+                    </p>
+                </div>
+            `
+        });
+
+        vm.component('page-entreprise', {
+            template: `
+                <!-- Banière -->
+                <div class="container-fluid text-center baniere">
+                    <h1 class="text-center">PROJET ENTREPRISE</h1>
+                </div>
+                <div class="container text-center p-3">
+                    <h2 class="h2">PROJETS D'ENTREPRISE</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum assumenda ex illum consectetur provident consequuntur enim harum 
                         pariatur vel dolorum a nam odit dolore necessitatibus quis, rerum, at nihil. Deleniti.
@@ -92,13 +226,28 @@
                 `
         });
 
-        vm.component('page-competences', {
+        vm.component('page-situation', {
             template: `
-                <div>
+                <!-- Banière -->
+                <div class="container-fluid text-center baniere">
+                    <h1 class="text-center">SITUATIONS PROFESSIONNELLES</h1>
+                </div>
+                <div class="container">
+
+                    <div class="row text-center">
+                        <div class="col-6">
+                            <button class="btn btn-outline btn-dark">Tableau de Synthèse</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-outline btn-dark">Description des compétences</button>
+                        </div>
+                    </div>
+
                     <form class="d-flex m-4">
                         <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Rechercher">
                         <button class="btn btn-outline-secondary" type="submit">Rechercher</button>
                     </form>
+
 
                     <div class="container p-4">
                         <div class="row flex mb-3">

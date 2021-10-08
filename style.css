@@ -1,0 +1,36 @@
+
+/* Corps du document */
+body
+{
+    background-color: rgba(240, 250, 240, 1);
+}
+.entete
+{
+    /* height: 3em; */
+    font-size: 25px;
+}
+.list-menu li
+{
+    padding: 10px;
+}
+.baniere h1
+{
+    font-size: 60px;
+    padding: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    line-height: 60px;
+}
+
+/* Style des compétences */
+.competences
+{
+    height: 50px;
+    border-radius: 4px;
+}
+.detail
+{
+    text-decoration: none;
+    color: black;
+}
+
